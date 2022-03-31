@@ -1,0 +1,41 @@
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 336px;
+    margin-bottom: 80px;
+}
+
+.ellipse {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #24404F;
+    margin-bottom: 20px;
+}
+
+.service {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 7.82px;
+}
+
+.arrow {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.description {
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.hidden {
+    display: none;
+}
