@@ -39,3 +39,7 @@
 .hidden {
     display: none;
 }
+
+@media (min-width: 1130px){
+    
+}
