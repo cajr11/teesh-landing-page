@@ -1,6 +1,5 @@
 .container {
-    height: 1228px;
-    border: 1px solid black;
+    max-height: 1228px;
     padding-top: 240px;
     display: flex;
     flex-direction: column;
