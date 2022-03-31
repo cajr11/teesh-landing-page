@@ -1,10 +1,10 @@
-import './App.css';
+import classes from './App.module.css';
 import NavBar from './components/UI/NavBar';
 import Hero from './components/Hero';
 
 function App() {
   return (
-    <div className="App">
+    <div className={classes.app}>
       <NavBar />
       <Hero />
     </div>
