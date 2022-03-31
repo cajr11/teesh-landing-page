@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import classes from "./ProvidedServices.module.css"
 
 const ProvidedService = ({ service }) => {
-    const [isDisplayed, setIsDisplayed] = useState (true);
+    const [isDisplayed, setIsDisplayed] = useState (false);
 
     const arrowClickHandler = () => {
         setIsDisplayed(prevState => !prevState)

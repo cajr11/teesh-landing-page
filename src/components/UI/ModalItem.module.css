@@ -1,0 +1,51 @@
+.item {
+    height: 90px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 9px 16px rgba(0, 20, 44, 0.1);
+    margin-right: 15px;
+} 
+
+.item:last-child {
+    margin-right: 0;
+}
+
+.pic {
+  height: 100%;
+  width: 90px;
+  object-fit: cover;
+}
+
+.info {
+    width: 130px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 15px;
+}
+
+.teaName {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 36px;
+    text-transform: capitalize;
+    color: #24404F;
+    margin: 0;
+}
+
+.teaRating {
+    margin: 0;
+    font-weight: 300;
+    font-size: 11px;
+    color: #24404F;
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    margin-left: 2.14px;
+}

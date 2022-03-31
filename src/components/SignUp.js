@@ -9,7 +9,6 @@ const SignUp = () => {
   const windowSize = window.innerWidth;
 
   useEffect(() => {
-    console.log(windowSize);
     if (windowSize > 481){
         setIsMobile(true);
     } else {
