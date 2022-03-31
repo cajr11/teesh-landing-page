@@ -1,8 +1,22 @@
-import React from 'react'
-import classes from "./SignUp.module.css"
-import ctaTeaCup from "../assets/cta_tea_cup_desktop.jpg"
+import React, { useEffect, useState } from 'react';
+import classes from "./SignUp.module.css";
+import ctaTeaCup from "../assets/cta_tea_cup_desktop.jpg";
+import ctaTeaCupMobile from "../assets/cta_tea_cup_mobile.jpg";
 
 const SignUp = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const windowSize = window.innerWidth;
+
+  useEffect(() => {
+    console.log(windowSize);
+    if (windowSize > 481){
+        setIsMobile(true);
+    } else {
+        setIsMobile(false)
+    }
+  },[windowSize])
+
   return (
     <footer className={classes.container}>
 
@@ -25,7 +39,8 @@ const SignUp = () => {
 
         {/* Tea cup image */}
        <div className={classes.teaCupContainer}>
-            <img className={classes.teaCup} src={ctaTeaCup} alt="tea cup filled with tea and clay pot of tea on wooden table"/>
+            {!isMobile && (<img className={classes.teaCup} src={ctaTeaCup} alt="tea cup filled with tea and clay pot of tea on wooden table"/>)}
+            {isMobile && (<img className={classes.teaCup} src={ctaTeaCupMobile} alt="tea cup filled with tea and clay pot of tea on wooden table"/>)}
        </div>
     </footer>
   )
