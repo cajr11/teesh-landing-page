@@ -7,6 +7,8 @@ const NavBar = () => {
         <nav className={classes.nav}>
             <div className={classes.inner}>
                 <h1 className={classes.navHeading}>TEESH</h1>
+
+                {/* Nav Ellipse */}
                 <div className={classes.navEllipse}></div>
             </div>
         </nav>

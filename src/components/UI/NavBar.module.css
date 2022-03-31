@@ -31,3 +31,9 @@
     border-radius: 50%;
     background-color: #0B1113;
 }
+
+@media (min-width: 768px){
+  .inner {
+      width: 97.5%;
+  }
+}
