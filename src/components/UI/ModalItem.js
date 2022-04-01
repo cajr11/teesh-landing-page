@@ -1,9 +1,14 @@
 import React from 'react';
 import classes from "./ModalItem.module.css"
 
-const ModalItem = ({ image, name, rating }) => {
+const ModalItem = ({ image, name, rating, onChosen, selected, position }) => {
+
+    const itemClickedHanlder = () => {
+        onChosen(position)
+    }
+
   return (
-    <div className={classes.item}>
+    <div className={classes.item} onClick={itemClickedHanlder}>
         {/* tea picture */}
         <img className={classes.pic} src={image} alt="tea pack" />
 

@@ -12,17 +12,22 @@ const Backdrop = ({ onClose }) => {
 const ModalOverlay = ({ onClose }) => {
   const [teaData, setTeaData] = useState(null);
   const [activeItem, setActiveItem] = useState(null)
+  const [selectedItem, setSelectedItem] = useState(0)
 
+  // This function sets the state of selected item and active item to highlight its body and display its data
+  const itemChosenHandler = (index) => {
+    setSelectedItem(index)
+  } 
+ 
   // Fetch tea data from API
   useEffect(() => {
     (async () => {
       const res = await fetch("https://gist.githubusercontent.com/LuigiR0jas/debdf41add7704681d9f7c734f478ac2/raw/7e7e5ad88132640d659c3ec8e657d8e02af01aa7/crates.json");
       const data = await res.json();
       setTeaData(data);
-      setActiveItem(data.data[2]);
-      console.log(activeItem);
+      setActiveItem(data.data[selectedItem]);
     })()
-  }, [])
+  }, [selectedItem])
 
 
     return (
@@ -36,8 +41,8 @@ const ModalOverlay = ({ onClose }) => {
         <div className={classes.teaTypes}>
             <div className={classes.inner}>
               
-              {teaData && teaData.data.map( tea => (
-                <ModalItem key={tea["crate_id"]} name={tea.name} rating={tea.rating} image={tea.picture} />
+              {teaData && teaData.data.map( (tea, index) => (
+                <ModalItem key={tea["crate_id"]} name={tea.name} rating={tea.rating} image={tea.picture} position={index} selected={selectedItem} onChosen={itemChosenHandler} />
               ))}
             </div>
         </div>
