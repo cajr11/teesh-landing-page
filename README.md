@@ -4,8 +4,12 @@
 
 To run locally, download the project files and then run:
 
-### `npm install`
+```
+npm install
+```
 
-After installion, you can run:
+After installation, you can run:
 
-### `npm start`
+```
+npm start
+```
