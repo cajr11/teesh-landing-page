@@ -13,7 +13,7 @@ const ModalItem = ({ image, name, rating, onChosen, selected, position }) => {
         <img className={classes.pic} src={image} alt="tea pack" />
 
         {/* Tea info */}
-        <div className={classes.info}>
+        <div className={selected === position ? classes.infoSelected : classes.info}>
             <h2 className={classes.teaName}>{name}</h2>
             <p className={classes.teaRating}>{rating}/5
                 <span className={classes.star}>

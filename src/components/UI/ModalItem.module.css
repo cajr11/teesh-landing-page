@@ -19,14 +19,20 @@
   object-fit: cover;
 }
 
-.info {
+.info,
+.infoSelected {
     width: 130px;
-    height: 90%;
+    height: 98%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     padding-right: 15px;
+}
+
+.infoSelected{
+    border: 1px solid #FFB700;
+    border-left: 0;
 }
 
 .teaName {
@@ -50,4 +56,29 @@
 .star {
     margin-top: 2px;
     margin-left: 4px;
+}
+
+@media (min-width: 1280px){
+    .item {
+        width: 351px;
+        height: 129px;
+        margin-bottom: 36px;
+    }
+
+    .pic {
+        width: 125px;
+    }
+
+    .infoSelected,
+    .info {
+        width: 226px;
+    }
+
+    .teaName {
+        font-size: 18px;
+    }
+
+    .teaRating {
+        font-size: 14px;
+    }
 }

@@ -17,9 +17,11 @@
   z-index: 12;
   background-color: grey;
   border-radius: 32px 0px 32px 0px;
-  max-width: 1299px;
-  max-height: 887px;
-
+  max-height: 600px;
+  max-width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
 }
 
 .teaTypes {
@@ -62,8 +64,27 @@
 @media (min-width: 1280px){
   .modal {
     width: 1299px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) !important;
+    max-width: 1299px;
+    max-height: 889px;
+    display: flex;
+    overflow-y: hidden;
+  }
+
+  .teaTypes {
+    padding-top: 0;
+    width: 486px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inner {
+    height: 80%;
+    padding: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 }

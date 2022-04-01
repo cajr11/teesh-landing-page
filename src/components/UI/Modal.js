@@ -49,7 +49,7 @@ const ModalOverlay = ({ onClose }) => {
 
         {/* Tea pack details */}
         <div className={classes.teaDetails}>
-        {activeItem && <TeaDetails title={activeItem.name} image={activeItem.picture} description={activeItem.description} content={activeItem.content} />}
+          {activeItem && <TeaDetails title={activeItem.name} image={activeItem.picture} description={activeItem.description} content={activeItem.content} />}
         </div>
       </div>
     )
