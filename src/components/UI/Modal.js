@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import classes from "./Modal.module.css"
 import ReactDOM from 'react-dom';
 import ModalItem from './ModalItem';
+import TeaDetails from './TeaDetails';
 
 const Backdrop = ({ onClose }) => {
   // modal backdrop
@@ -11,11 +12,12 @@ const Backdrop = ({ onClose }) => {
 const ModalOverlay = ({ onClose }) => {
   const [teaData, setTeaData] = useState(null);
 
+  // Fetch tea data from API
   useEffect(() => {
     (async () => {
       const res = await fetch("https://gist.githubusercontent.com/LuigiR0jas/debdf41add7704681d9f7c734f478ac2/raw/7e7e5ad88132640d659c3ec8e657d8e02af01aa7/crates.json");
       const data = await res.json();
-      setTeaData(data)
+      setTeaData(data);
     })()
   }, [])
 
@@ -36,6 +38,11 @@ const ModalOverlay = ({ onClose }) => {
               ))}
             </div>
         </div>
+
+        {/* Tea pack details */}
+        <div className={classes.teaDetails}>
+            <TeaDetails />
+        </div>
       </div>
     )
 }
@@ -43,6 +50,7 @@ const ModalOverlay = ({ onClose }) => {
 const Modal = ({ onClose }) => {
   return (
    <>
+    {/* Portal the modal overlay and backdrop for better accesibility */}
     {ReactDOM.createPortal(<Backdrop onClose={onClose} />, document.getElementById("backdrop-root"))}
     {ReactDOM.createPortal(<ModalOverlay onClose={onClose} />, document.getElementById("modal-root"))}
    </>

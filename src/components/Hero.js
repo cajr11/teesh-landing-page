@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import classes from "./Hero.module.css"
 import heroImg from "../assets/hero_tea_cup.jpg"
 import Modal from './UI/Modal';

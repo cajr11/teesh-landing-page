@@ -5,7 +5,7 @@ const ModalItem = ({ image, name, rating }) => {
   return (
     <div className={classes.item}>
         {/* tea picture */}
-        <img className={classes.pic} src={image} alt="tea pack picture" />
+        <img className={classes.pic} src={image} alt="tea pack" />
 
         {/* Tea info */}
         <div className={classes.info}>
