@@ -75,4 +75,13 @@
         line-height: 30px;
         text-align: left;
     }
+
+    .packContents {
+        height: 190px;
+    }
+
+    .cta {
+        margin-top: 15px;
+        width: 193px;
+    }
 }

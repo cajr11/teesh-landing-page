@@ -66,12 +66,14 @@
     width: 1299px;
     max-width: 1299px;
     max-height: 889px;
+    background-color: #fff;
+    height: 750px;
     display: flex;
     overflow-y: hidden;
   }
 
   .teaTypes {
-    padding-top: 0;
+    padding-top: 20px;
     width: 486px;
     height: 100%;
     display: flex;
@@ -80,11 +82,18 @@
   }
 
   .inner {
-    height: 80%;
+    height: 100%;
     padding: initial;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    overflow-y: scroll;
+  }
+
+  .closeModal {
+    height: 64px;
+    width: 64px;
+    z-index: 13;
+    font-size: 18px;
   }
 }
