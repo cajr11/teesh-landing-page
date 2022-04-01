@@ -1,30 +1,31 @@
 import React from 'react';
 import classes from './TeaDetails.module.css'
-import testimg from '../../assets/cta_tea_cup_desktop.jpg'
 import PackContent from './PackContent';
 
-const TeaDetails = () => {
+const TeaDetails = ({ image, title, description, content }) => {
   return (
     <div className={classes.container}>
         {/* Tea pack picture */}
-        <img src={testimg} alt="" className={classes.image} />
+        <img src={image} alt="" className={classes.image} />
 
         {/* Tea pack details */}
         <div className={classes.content}>
 
             {/* Heading */}
-            <h2 className={classes.heading}>Tea Pack 1</h2>
+            <h2 className={classes.heading}>{title}</h2>
 
             {/* Description */}
             <p className={classes.description}>
-                Experience the world of black teas in one sample set. This is a great way to learn the wide range of flavors offered by black tea.
+                {description}
             </p>
 
             {/* Pack Contents Container */}
             <div className={classes.packContents}>
-                <PackContent />
-                <PackContent />
-                <PackContent />
+                {content && content.map(item =>
+                    (
+                    <PackContent key={item["tea_id"]} image={item.picture} title={item.name} rating={item.rating} info={item.description}/>
+                    )
+                )}
             </div>
 
             {/* Cta */}
